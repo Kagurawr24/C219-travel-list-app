@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: "Quicksand", sans-serif;
+  color: #1e3a5f; /* Night blue */
+  font-weight: 500;
+  background-color: #0a2540; /* Darker night blue */
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+h1 {
+  text-align: center;
+  background-color: #ffd700; /* Gold */
+  font-family: "Monoton", sans-serif;
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
+  color: #0a2540; /* Dark blue */
+}
+
+.add-form {
+  background-color: #1e3a5f; /* Night blue for the Add Item section */
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for separation */
+}
+
+button,
+select,
+input {
+  background-color: #acd8f0; /* Light blue */
+  color: #1e3a5f; /* Night blue */
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background-color: #ffd700; /* Gold */
+  color: #0a2540; /* Darker night blue */
+}
+
+.list {
+  background-color: #0a2540; /* Same darker night blue as the Search Bar */
+  color: #ffebb3; /* Light gold text for contrast */
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Added shadow for subtle elevation */
+}
+
+.actions button,
+.list select {
+  text-transform: uppercase;
+  padding: 0.8rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0.8rem;
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  overflow: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  justify-content: center;
+  align-content: start;
+  background-color: #0a2540; /* Ensures uniform background inside the list */
+  padding: 2rem; /* Added padding for spacing */
+  border-radius: 1.6rem; /* Rounded corners for a clean look */
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  border: 1px solid #ffd700; /* Gold border */
+  border-radius: 0.8rem;
+  background-color: rgba(172, 216, 240, 0.1); /* Translucent light blue */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.list li.packed {
+  opacity: 0.6;
+  background-color: rgba(30, 58, 95, 0.3); /* Translucent night blue for packed items */
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: #ffd700; /* Gold accent for checkboxes */
+}
+
+.list li button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.8rem;
+  transform: translateY(2px);
+}
+
+.stats {
+  background-color: #ffd700; /* Gold */
+  text-align: center;
+  font-weight: 700;
+  padding: 1.6rem 0; /* Reduced padding to make the section smaller */
+  font-size: 1.6rem; /* Smaller font size for compact design */
+  color: #0a2540; /* Darker night blue */
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 80%;
+  height: 1rem;
+  margin: 1.6rem auto;
+  background-color: #acd8f0; /* Light blue */
+  border-radius: 10rem;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background-color: #ffd700; /* Gold */
+  transition: width 0.3s ease;
+}
+
+/* Search Bar */
+.search-bar {
+  background-color: #0a2540; /* Darker night blue for the Search Bar section */
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 -2px 4px rgba(255, 215, 0, 0.2); /* Gold inset shadow for a subtle divider */
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 10rem;
+  background-color: #acd8f0; /* Light blue */
+  color: #1e3a5f; /* Night blue */
+}
+
+.search-bar input::placeholder {
+  color: #709ab6; /* Muted light blue */
+  font-weight: 500;
+}
+
+/* Button Hover Effects */
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* New styles for the delete button */
+.delete-button {
+  background-color: #e04e2b; /* Bold red for delete */
+  color: white;
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c23f21; /* Darker red on hover */
+}
+
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on focus */
+}
